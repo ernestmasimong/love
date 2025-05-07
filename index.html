@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Freestyle Script', cursive;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-y: auto;
+            color: black;
+            background-image: url("C:\\Users\\Ernest Masimong\\Downloads\\WhatsApp Image 2025-05-06 at 23.03.01.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+
+        /* Header styling */
+        header {
+            color: #b58f8f;
+            padding: 25px 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(5px);
+        }
+
+        header h1 {
+            color: #b58f8f;
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation styling */
+        nav {
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            backdrop-filter: blur(5px);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-size: 28px;
+        }
+
+        nav ul li a:hover {
+            background-color: #b58f8f;
+            transform: scale(1.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Main content styles */
+        main {
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            border-radius: 15px;
+            margin-top: 30px;
+            min-height: 400px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        section h2 {
+            color: #9932CC;
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        div img {
+            max-width: 350px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        div img:hover {
+            transform: scale(1.05);
+        }
+
+        div video {
+            max-width: 350px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        div video:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: rgba(181, 143, 143, 0.7);
+            color: #fff;
+            padding: 25px 0;
+            text-align: left;
+            margin-top: 30px;
+            position: relative;
+            z-index: 2;
+            font-weight: bold;
+            font-size: 20px;
+            border-top: 1px solid #fff;
+            backdrop-filter: blur(5px);
+            min-height: fit-content;
+        }
+
+        /* Video Styles */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            display: none;
+        }
+
+        p {
+            font-size: 28px;
+            color: black;
+            line-height: 1.7;
+            text-align: center;
+            padding: 0 10px;
+        }
+        a{
+            color: #fff;
+            font-size: 32px;
+        }
+        h2{
+            font-size: 50px;
+        }
+        header h1{
+            font-size: 60px;
+        }
+
+    /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            header h1{
+                font-size: 48px;
+            }
+            p{
+                font-size: 24px;
+            }
+            h2{
+                font-size: 40px;
+            }
+            .div img,
+            .div video{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-width: 480px){
+            header h1{
+                font-size: 36px;
+            }
+            nav ul li a{
+                font-size: 24px;
+                padding: 10px 15px;
+            }
+            p{
+                font-size: 20px;
+            }
+            h2{
+                font-size: 32px;
+            }
+        }
+
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Freestyle+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <video id="background-video" autoplay loop playsinline muted volume="1.0">
+        <source src="C:\Users\Ernest Masimong\Downloads\WhatsApp Video 2025-05-02 at 11.36.59.mp4" type="video/mp4">
+    </video>
+    <header>
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+            <h1 style="font-size: 60px; color: black;">In every beat, my heart sings your name, a symphony of devotion. You are the rhythm that guides my soul, the melody that fills my days. My love for you is a constant echo, unwavering and true. Forever entwined, my heart beats only for you.</h1>
+        </marquee>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home"  style="color: black;">Home</a></li>
+            <li><a href="#about-her"  style="color: black;">You</a></li>
+            <li><a href="#pretty"  style="color: black;">Princess</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2 style="font-size: 50px; color: black;">Home</h2>
+            <p style="color: pink;">Ntshebo, you are the most beautiful❤️, intelligent and kind person I have ever known. Your smile is like a sunrise, and your laughter is the sweetest melody. I am so grateful to have met someone like you in my life.</p>
+            <div>
+                
+                <img src="C:\Users\Ernest Masimong\Pictures\Camera Roll\aec0650d-3011-4aa1-8a4b-71151a3a1857.jfif"
+                     alt="aec0650d-3011-4aa1-8a4b-71151a3a1857">
+                <img src="C:\Users\Ernest Masimong\Pictures\Camera Roll\7ca04485-2a29-4f4d-bf7c-2735ffa66213.jfif"
+                     alt="7ca04485-2a29-4f4d-bf7c-2735ffa66213">
+                <img src="C:\Users\Ernest Masimong\Downloads\WhatsApp Image 2025-05-02 at 11.36.57.jpeg"
+                     alt="WhatsApp Image 2025-05-02 at 11.36.57">
+                <video  controls autoplay loop playsinline  >
+                    <source src="C:\Users\Ernest Masimong\Downloads\WhatsApp Video 2025-05-06 at 21.04.48.mp4" type="video/mp4">
+                    
+                </video>
+            </div>
+        </section>
+
+        <section id="about-her">
+            <h2 style="font-size: 50px; color: black;">You</h2>
+            <p style="color: pink;">The way you smile when you're happy, the way you light up a room just by being yourself, your kindness to
+                everyone around you, the sound of your laughter (a melody that stays with me), your hugs (a safe haven in a
+                chaotic world), the way you make me feel safe, your unwavering support in everything I do, your silly jokes
+                that always make me laugh, the way you listen to me (truly listen), your passion for life and all that you
+                do, your beautiful eyes and the way they sparkle, the way you make even the ordinary moments special, your
+                intelligence and the fascinating conversations we have, your thoughtfulness and sweet gestures, your strength
+                and resilience in overcoming challenges, your honesty and the trust I feel with you, your adventurous spirit
+                and our exciting escapades, your warm heart and caring nature, the way you inspire me to be a better person,
+                and the way you love me, completely and unconditionally, are all things I cherish about you.❤️</p>
+            <div>
+                <img src="C:\Users\Ernest Masimong\Downloads\WhatsApp Image 2025-05-02 at 11.36.56 (1).jpeg"
+                     alt="WhatsApp Image 2025-05-02 at 11.36.56 (1)">
+                <img src="C:\Users\Ernest Masimong\Downloads\WhatsApp Image 2025-05-02 at 11.36.55.jpeg"
+                     alt="WhatsApp Image 2025-05-02 at 11.36.55">
+                <video  controls autoplay loop playsinline  >
+                    <source src="C:\Users\Ernest Masimong\Downloads\WhatsApp Video 2025-05-06 at 19.45.57.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video  controls autoplay loop playsinline  >
+                    <source src="C:\Users\Ernest Masimong\Downloads\WhatsApp Video 2025-05-06 at 22.10.03.mp4" type="video/mp4">
+                </video>
+                 <video  controls autoplay loop playsinline style="border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  margin-top: 20px;"  >
+                    <source src="C:\Users\Ernest Masimong\Downloads\WhatsApp Video 2025-05-02 at 11.28.37.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section id="pretty">
+            <h2 style="font-size: 50px; color: black;">Princess</h2>
+            <p style="color: pink;">She carries a light within her that doesn’t need to shout to be seen—it’s felt in the way she listens, in the
+                way she cares, and in the quiet strength behind every gentle word. She gives without keeping score,
+                forgives even when it hurts, and loves with a depth that softens even the hardest hearts. There’s grace in
+                her presence, not because she tries to be perfect, but because her intentions are pure and her soul is
+                kind. She finds beauty in the unnoticed, hope in the broken, and always leaves people better than she found
+                them.❤️</p>
+                 <div>
+                    <video  controls autoplay loop playsinline  >
+                        <source src="C:\Users\Ernest Masimong\Downloads\WhatsApp Video 2025-05-06 at 19.45.54 (1).mp4" type="video/mp4">
+                    </video>
+                    <img src="C:\Users\Ernest Masimong\Downloads\WhatsApp Image 2025-05-02 at 11.36.58 (1).jpeg"
+                     alt="WhatsApp Image 2025-05-02 at 11.36.58 (1)">
+                     <img src="C:\Users\Ernest Masimong\Downloads\WhatsApp Image 2025-05-02 at 11.36.55.jpeg"
+                     alt="WhatsApp Image 2025-05-02 at 11.36.55">
+                     <video  controls autoplay loop playsinline  style="border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); margin-top: 30px;" >
+                        <source src="C:\Users\Ernest Masimong\Downloads\WhatsApp Video 2025-05-06 at 20.43.32.mp4" type="video/mp4">
+                    </video>
+                </div>
+        </section>
+    </main>
+    <footer style="font-size: 24px; color: black; min-height: fit-content;">
+        
+        <p>Made with love ❤️ by <a href="https://fromerney.com" style="color: #0b6be1;" target="_blank">fromerney</a></p>
+        
+    </footer>
+<script>
+    //smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body>
+</html>
